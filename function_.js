@@ -2,7 +2,7 @@ const bin_Send_Event_status_Auto = (id, status) => {
     return new Promise((resolve, reject) => {
         try {
 
-            const socket = new WebSocket('wss://map-wss-exp.cleverapps.io?id=bin_' + id);
+            const socket = new WebSocket('wss://map-ws-exp.cleverapps.io?id=bin_' + id);
             // Connection opened
             socket.addEventListener('open', function (event) {
                 console.log('Connected to WS Server Bin state')
@@ -32,7 +32,7 @@ const bin_Send_Event_status_Auto = (id, status) => {
 }
 
 const vehicle_Send_Event_breakdown_Auto = (id) => {
-    const socket = new WebSocket('wss://map-wss-exp.cleverapps.io?id=vehicle_' + id);
+    const socket = new WebSocket('wss://map-ws-exp.cleverapps.io?id=vehicle_' + id);
     // Connection opened
     socket.addEventListener('open', function (event) {
         console.log('Connected to WS Server Vehicle breakdown')
@@ -63,8 +63,8 @@ const gps_Send__Auto = (id, dataTemporary, startTime) => {
     // return new Promise((resolve, reject) => {
         // try {
             dataTemporary = dataTemporary.filter((item, index) => dataTemporary.indexOf(item) === index);
-            // const base_url = 'wss://map-wss-exp.cleverapps.io?id=gps_' +id
-            const base_url = 'wss://map-wss-exp.cleverapps.io?id=gps_' + id
+            // const base_url = 'wss://map-ws-exp.cleverapps.io?id=gps_' +id
+            const base_url = 'wss://map-ws-exp.cleverapps.io?id=gps_' + id
             // const base_url = 'wss://192.168.1.86:3000/2'
             // const base_url = 'wss://172.20.10.3:3000/2'
             const wss = new WebSocket(base_url)
