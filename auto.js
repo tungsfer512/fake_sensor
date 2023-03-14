@@ -2497,7 +2497,7 @@ setInterval(() => {
     for (let i = 0; i < 4; i++) {
         runInFive(i);
     }
-}, 1000 * 30)
+}, 1000 * 300)
 // for(let i = 0;i < 48; i++) {
 //     await bin_Send_Event_status_Auto(i+ 1, 'empty')
 // }
